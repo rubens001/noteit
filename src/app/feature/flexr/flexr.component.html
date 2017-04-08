@@ -1,0 +1,28 @@
+<div fxLayout="row" fxShow="false" fxShow.gt-xs>
+    <button md-raised-button>button1</button>
+    <button md-raised-button>button2</button>
+    <button md-raised-button>button3</button>
+</div>
+
+<div fxLayout="column" fxShow="false" fxShow.lt-sm>
+    <button md-raised-button>button1</button>
+    <button md-raised-button>button2</button>
+    <button md-raised-button>button3</button>
+</div>
+
+<div fxLayout="row" fxLayout.xs="column">
+    <button md-raised-button>button4</button>
+    <button md-raised-button>button5</button>
+    <button md-raised-button>button6</button>
+</div>
+
+<div fxLayout='column' class="zero">
+  <div fxFlex="33" [fxFlex.md]="vm.box1Width" class="one" >one</div>
+  <div fxFlex="33" [fxLayout]="vm.direction" fxLayout.md="row" class="two">
+    <div fxFlex="22" fxFlex.md="10px" fxHide.lg class="two_one">2.1</div>
+    <div fxFlex="205px" fxFlex.md="65" class="two_two">2.2</div>
+    <div fxFlex="30px" fxFlex.md="25" fxShow [fxHide.md]="vm.hideBox" class="two_three">2.3</div>
+  </div>
+  <div fxFlex class="three">three</div>
+</div>
+

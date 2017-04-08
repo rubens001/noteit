@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+/* "../node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css" */
+/* '~@angular/material/core/theming/prebuilt/deeppurple-amber.css' */
+/* '~@angular/material/core/theming/prebuilt/pink-bluegrey.css' */
+/* '~@angular/material/core/theming/prebuilt/purple-green.css' */
+/* './app/theme/unicorn-app-theme.css' */
+/* './app/theme/unicorn-dark-theme.css' */
+/* './app/theme/mobile-app-theme.css' */
+
+@import '~font-awesome/css/font-awesome.css';
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import './app/theme/mobile-app-theme.css';
+
+body {
+  margin: 10;
+  font-family: Roboto, sans-serif;
+}

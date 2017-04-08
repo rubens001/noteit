@@ -1,0 +1,49 @@
+<!--
+<md-toolbar>
+  <div class="md-toolbar-tools">
+      <md-button [routerLink] = "['/']"> Our Planets </md-button>
+
+    <span>
+      <md-button [routerLink] = "['/flex']" aria-label="Flex"> Flex </md-button>
+    </span>
+    <span>
+      <md-button aria-label="Second"> Button2 </md-button>
+    </span>
+  </div>
+
+    <span class="fill-space"> </span>
+
+    <span>
+      <a [routerLink] = "['test']">
+        <button md-icon-button color="primary">
+          <i class="fa fa-cog fa-lg"></i>
+        </button>
+      </a>
+    </span>
+</md-toolbar>
+-->
+
+<md-toolbar color="primary">
+    <button md-button routerLink="/">
+      <!--<md-icon>home</md-icon> -->
+      <i class="fa fa-home fa-lg"></i>
+      HOME</button>
+
+    <span class="fill-space" fxHide.gt-sm></span>
+
+    <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+        <button md-button [routerLink]="['/flex']">flex</button>
+        <button md-button [routerLink]="['/test']">test</button>
+        <button md-button [routerLink]="['/flexr']">flexr</button>
+        <button md-button [routerLink]="['/form']">form</button>
+    </div>
+    
+    <button md-button [md-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+     <md-icon>menu</md-icon>
+    </button>
+
+</md-toolbar>
+<md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item [routerLink]="['/flex']">flex</button>
+    <button md-menu-item [routerLink]="['/test']">test</button>
+</md-menu>
