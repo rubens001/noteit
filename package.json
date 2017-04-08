@@ -2,6 +2,7 @@
   "name": "noteit",
   "version": "0.0.0",
   "license": "MIT",
+  "author": "Rubens Zanatta <rubenz001@hotmail.com>",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
