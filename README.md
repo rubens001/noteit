@@ -2,7 +2,7 @@
 
 ### DEPENDENCIES : need node version 6.x+ AND @angular/cli
 
-#### angular-cli install
+#### @angular/cli install
 
 ```sh
 $ npm install -g @angular/cli
