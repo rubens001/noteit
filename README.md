@@ -10,18 +10,19 @@ OR
 $ sudo npm install -g @angular/cli
 ```
 
-### START
+## START
 ```sh
 $ npm install
 $ ng serve
 http://localhost:4200
 ```
 
-### Ref
+## Refs
 
-### https://material.angular.io/components
-
-### https://github.com/angular/material2/blob/master/guides/getting-started.md
+```
+https://material.angular.io/components
+https://github.com/angular/material2/blob/master/guides/getting-started.md
+```
 
 ## Font Awesome
 
@@ -30,7 +31,7 @@ $ npm install font-awesome --save
 In styles.css : @import '~font-awesome/css/font-awesome.css';
 ```
 
-### Responsive Flex
+## Responsive Flex
 
 ```
 $ npm install @angular/flex-layout --save
@@ -38,10 +39,19 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 FlexLayoutModule
 ```
 
-## Ref
-### https://github.com/angular/flex-layout
-### https://github.com/angular/flex-layout/wiki
-### doc https://tburleson-layouts-demos.firebaseapp.com/#/docs
-### demo https://tburleson-layouts-demos.firebaseapp.com/#/responsive
-### wiki https://github.com/angular/flex-layout/wiki/Responsive-API
+## Refs
 
+```
+https://github.com/angular/flex-layout
+https://github.com/angular/flex-layout/wiki
+doc https://tburleson-layouts-demos.firebaseapp.com/#/docs
+demo https://tburleson-layouts-demos.firebaseapp.com/#/responsive
+wiki https://github.com/angular/flex-layout/wiki/Responsive-API
+```
+
+## Themes
+
+```
+left some css in /src/app/theme
+change them in /src/styles.css
+```
