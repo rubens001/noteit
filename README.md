@@ -2,7 +2,7 @@
 
 ### DEPENDENCIES : need node version 6.x+ AND @angular/cli
 
-#### angular-cli install
+#### @angular/cli install
 
 ```sh
 $ npm install -g @angular/cli
@@ -16,6 +16,8 @@ $ npm install
 $ ng serve
 http://localhost:4200
 ```
+
+## DEMO : [https://fullstack-c6c9e.firebaseapp.com/html/noteit/](https://fullstack-c6c9e.firebaseapp.com/html/noteit/)
 
 ## Refs
 
@@ -41,13 +43,11 @@ FlexLayoutModule
 
 ## Refs
 
-```
-https://github.com/angular/flex-layout
-https://github.com/angular/flex-layout/wiki
-doc https://tburleson-layouts-demos.firebaseapp.com/#/docs
-demo https://tburleson-layouts-demos.firebaseapp.com/#/responsive
-wiki https://github.com/angular/flex-layout/wiki/Responsive-API
-```
+#### flex-layout :  [https://github.com/angular/flex-layout](https://github.com/angular/flex-layout)
+#### flex wiki :  [https://github.com/angular/flex-layout/wiki](https://github.com/angular/flex-layout/wiki)
+#### flex doc : [https://tburleson-layouts-demos.firebaseapp.com/#/docs](https://tburleson-layouts-demos.firebaseapp.com/#/docs)
+#### flex demo : [https://tburleson-layouts-demos.firebaseapp.com/#/responsive](https://tburleson-layouts-demos.firebaseapp.com/#/responsive)
+#### responsive wiki : [https://github.com/angular/flex-layout/wiki/Responsive-API](https://github.com/angular/flex-layout/wiki/Responsive-API)
 
 ## Themes
 
