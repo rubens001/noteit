@@ -16,7 +16,7 @@ export class ToolbarComponent implements OnInit {
   ngOnInit() {
   }
 
-  onMenu = function(sidenav : any) {
+  onMenu(sidenav: any) {
     this.isSidenav = !this.isSidenav;
     if (this.isSidenav) {
       this.menuClass = 'fa fa-times fa-2x';
@@ -26,8 +26,9 @@ export class ToolbarComponent implements OnInit {
       sidenav.close();
     }
   }
+
   onCloseSidenav() {
-    this.isSidenav=false;
+    this.isSidenav = false;
     this.menuClass = this.menuBars;
   }
 }

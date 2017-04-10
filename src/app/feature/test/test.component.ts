@@ -17,6 +17,8 @@ export class TestComponent implements OnInit {
   progress = 0;
   test: any = {};
   user: any = {};
+  lastDialogResult: string;
+  foods = [{name: 'bread', rating: 6}, {name: 'meat', rating: 7}, {name: 'lunch', rating: 2}];
 
   // para autocomplete
    myControl = new FormControl();
@@ -49,7 +51,7 @@ export class TestComponent implements OnInit {
       return this.options.filter(option => new RegExp(val, 'gi').test(option));
    }
 
-  openDialog(key) {
+  openDialog() {
     const config = new MdDialogConfig();
     config.viewContainerRef = this.viewContainerRef;
     this.dialogRef = this.dialog.open(DialogOverviewExampleComponent, config);

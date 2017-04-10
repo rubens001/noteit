@@ -7,12 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlexrComponent implements OnInit {
 
-  vm : object = {};
+  vm = {box1Width: 33, direction: 'column', hideBox: false};
+
   constructor() {
-    this.vm={box1Width:33, direction:'column', hideBox:false};
   }
 
   ngOnInit() {
   }
-  
 }

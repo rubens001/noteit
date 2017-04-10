@@ -7,12 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlexComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  direction = "row";
+   direction = 'row';
   DIRECTIONS = ['row', 'row-reverse', 'column', 'column-reverse'];
 
   // para grid
@@ -22,9 +17,14 @@ export class FlexComponent implements OnInit {
     {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
     {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
   ];
-  
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
   toggleDirection() {
-    let next = (this.DIRECTIONS.indexOf(this.direction) +1 ) % this.DIRECTIONS.length;
+    const next = (this.DIRECTIONS.indexOf(this.direction) + 1 ) % this.DIRECTIONS.length;
     this.direction = this.DIRECTIONS[next];
   }
 }

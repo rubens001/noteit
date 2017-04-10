@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  floatingLabel: string = 'auto';
+  floatingLabel = 'auto';
   color: boolean;
   requiredField: boolean;
   ctrlDisabled = false;
@@ -37,7 +37,7 @@ export class FormComponent implements OnInit {
       this.items.push({ value: ++this.max });
     }
   }
-  
+
   constructor() { }
 
   ngOnInit() {
