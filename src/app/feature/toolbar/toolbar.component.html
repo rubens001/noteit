@@ -1,49 +1,53 @@
 <!--
-<md-toolbar>
-  <div class="md-toolbar-tools">
-      <md-button [routerLink] = "['/']"> Our Planets </md-button>
-
-    <span>
-      <md-button [routerLink] = "['/flex']" aria-label="Flex"> Flex </md-button>
-    </span>
-    <span>
-      <md-button aria-label="Second"> Button2 </md-button>
-    </span>
-  </div>
-
-    <span class="fill-space"> </span>
-
-    <span>
-      <a [routerLink] = "['test']">
-        <button md-icon-button color="primary">
-          <i class="fa fa-cog fa-lg"></i>
-        </button>
-      </a>
-    </span>
-</md-toolbar>
--->
-
-<md-toolbar color="primary">
-    <button md-button routerLink="/">
-      <!--<md-icon>home</md-icon> -->
-      <i class="fa fa-home fa-lg"></i>
-      HOME</button>
-
-    <span class="fill-space" fxHide.gt-sm></span>
-
-    <div fxLayout="row" fxShow="false" fxShow.gt-sm>
         <button md-button [routerLink]="['/flex']">flex</button>
         <button md-button [routerLink]="['/test']">test</button>
         <button md-button [routerLink]="['/flexr']">flexr</button>
         <button md-button [routerLink]="['/form']">form</button>
-    </div>
-    
-    <button md-button [md-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
-     <md-icon>menu</md-icon>
+-->
+<div class="top-one">
+  <div fxFlex fxLayout="row" fxLayoutAlign="space-around center" fxHide.xs>
+    <div fxFlex="20"></div>
+    <button md-button class="btn-top" [routerLink]="['/blog']">BLOG</button>
+    <button md-button class="btn-top" [routerLink]="['/flex']">SOBRE</button>
+    <button md-button class="btn-top" [routerLink]="['/flexr']">CONTATO</button>
+    <div fxFlex="20"></div>
+  </div>
+
+  <div fxHide.gt-xs fxFlex fxLayout="row">
+<!--
+    <button md-button class="btn-top" (click)="onMenu(sidenav);">
+      <i [class]="menuClass" aria-hidden="true"
+      aria-label="Menu" aria-controls="navigation"></i>
+    </button>
+    -->
+ 
+    <button md-button [class]="menuClass" type="button" (click)="onMenu(sidenav);"
+      aria-label="Menu" aria-controls="navigation">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
     </button>
 
-</md-toolbar>
-<md-menu x-position="before" #menu="mdMenu">
-    <button md-menu-item [routerLink]="['/flex']">flex</button>
-    <button md-menu-item [routerLink]="['/test']">test</button>
-</md-menu>
+    <div fxFlex fxLayout="row" fxLayoutAlign="start">
+        <button md-button class="btn-top" [routerLink]="['/']">TITULO</button>
+    </div>
+  </div>
+</div>
+
+<div style="height:4em"></div>
+
+<md-sidenav-container [style.visibility]="!isSidenav ? 'hidden' : 'visible'"
+  class="sidenav-container" fxHide.gt-xs>
+  <md-sidenav #sidenav class="sidenav" (close-start)="onCloseSidenav()">
+    <div fxFlex fxLayout="column" fxLayoutAlign="space-around center">
+      <div fxFlex="20"></div>
+      <button md-button class="btn-top" [routerLink]="['/blog']" (click)="sidenav.close()">BLOG</button>
+      <button md-button class="btn-top" [routerLink]="['/flex']" (click)="sidenav.close()">SOBRE</button>
+      <button md-button class="btn-top" [routerLink]="['/flexr']" (click)="sidenav.close()">CONTATO</button>
+      <div fxFlex="20"></div>
+    </div>
+  </md-sidenav>
+
+  <div class="sidenav-content">
+  </div>
+</md-sidenav-container>
