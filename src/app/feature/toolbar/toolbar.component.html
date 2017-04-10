@@ -1,35 +1,22 @@
-<!--
-        <button md-button [routerLink]="['/flex']">flex</button>
-        <button md-button [routerLink]="['/test']">test</button>
-        <button md-button [routerLink]="['/flexr']">flexr</button>
-        <button md-button [routerLink]="['/form']">form</button>
--->
 <div class="top-one">
   <div fxFlex fxLayout="row" fxLayoutAlign="space-around center" fxHide.xs>
     <div fxFlex="20"></div>
-    <button md-button class="btn-top" [routerLink]="['/blog']">BLOG</button>
-    <button md-button class="btn-top" [routerLink]="['/flex']">SOBRE</button>
-    <button md-button class="btn-top" [routerLink]="['/flexr']">CONTATO</button>
+    <button md-button class="btn-top" [routerLink]="['/flex']"><b>flex</b></button>
+    <button md-button class="btn-top" [routerLink]="['/test']"><b>test</b></button>
+    <button md-button class="btn-top" [routerLink]="['/flexr']"><b>flexr</b></button>
+    <button md-button class="btn-top" [routerLink]="['/form']"><b>form</b></button>
     <div fxFlex="20"></div>
   </div>
 
   <div fxHide.gt-xs fxFlex fxLayout="row">
-<!--
+
     <button md-button class="btn-top" (click)="onMenu(sidenav);">
       <i [class]="menuClass" aria-hidden="true"
       aria-label="Menu" aria-controls="navigation"></i>
     </button>
-    -->
- 
-    <button md-button [class]="menuClass" type="button" (click)="onMenu(sidenav);"
-      aria-label="Menu" aria-controls="navigation">
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button>
 
     <div fxFlex fxLayout="row" fxLayoutAlign="start">
-        <button md-button class="btn-top" [routerLink]="['/']">TITULO</button>
+        <button md-button class="btn-top" [routerLink]="['/']" (click)="sidenav.close()">TITULO</button>
     </div>
   </div>
 </div>
@@ -41,9 +28,10 @@
   <md-sidenav #sidenav class="sidenav" (close-start)="onCloseSidenav()">
     <div fxFlex fxLayout="column" fxLayoutAlign="space-around center">
       <div fxFlex="20"></div>
-      <button md-button class="btn-top" [routerLink]="['/blog']" (click)="sidenav.close()">BLOG</button>
-      <button md-button class="btn-top" [routerLink]="['/flex']" (click)="sidenav.close()">SOBRE</button>
-      <button md-button class="btn-top" [routerLink]="['/flexr']" (click)="sidenav.close()">CONTATO</button>
+      <button md-button class="btn-top" [routerLink]="['/flex']" (click)="sidenav.close()"><b>flex</b></button>
+      <button md-button class="btn-top" [routerLink]="['/test']" (click)="sidenav.close()"><b>test</b></button>
+      <button md-button class="btn-top" [routerLink]="['/flexr']" (click)="sidenav.close()"><b>flexr</b></button>
+      <button md-button class="btn-top" [routerLink]="['/form']" (click)="sidenav.close()"><b>form</b></button>
       <div fxFlex="20"></div>
     </div>
   </md-sidenav>

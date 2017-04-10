@@ -36,7 +36,3 @@ i.fa-times{
   background-color: #222;
   padding: 20px;
 }
-
-.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  background-color: #ccc;
-}
