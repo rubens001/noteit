@@ -12,6 +12,8 @@ $ sudo npm install -g @angular/cli
 
 ## START
 ```sh
+$ git clone git@github.com:rubens001/noteit.git
+$ cd noteit/
 $ npm install
 $ ng serve
 http://localhost:4200
