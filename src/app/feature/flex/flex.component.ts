@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
+import { EmptyObservable } from 'rxjs/observable/EmptyObservable';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-flex',
@@ -9,7 +12,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class FlexComponent implements OnInit {
 
-   direction = 'row';
+  direction = 'row';
   DIRECTIONS = ['row', 'row-reverse', 'column', 'column-reverse'];
 
   // para grid
@@ -31,8 +34,24 @@ export class FlexComponent implements OnInit {
   }
 
   observe() {
-    // alert('observe');
-    const responseStream: Observable<any> = Observable.create('https://api.github.com/users');
+
+    // const responseStream: Observable<any> = Observable.create(function (observer: Observer<any>) {
+    //   $.getJSON('https://api.github.com/users')
+    //   .done(function(response) { observer.next(response); })
+    //   .fail(function(jqXHR, statusText, error) {
+    //     console.log('error1 ', error, jqXHR.status);
+    //     observer.error(error ? error : statusText);
+    //   })
+    //   .always(function() { observer.complete(); });
+
+    // });
+
+    // responseStream.subscribe(data => {
+    //   console.log('data ',data);
+    // }, err => {
+    //   console.error('error2 found ', err);
+    // });
+
     
 
   }

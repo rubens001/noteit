@@ -57,3 +57,30 @@ FlexLayoutModule
 left some css in /src/app/theme
 change them in /src/styles.css
 ```
+
+### To use JQuery with angular-cli project :
+
+```
+First: Install jQuery, the actual library
+
+npm install jquery --save
+
+Then: Install jQuery TypeScript autocomplete
+
+npm install @types/jquery --save-dev
+Finally: Go to the ./angular-cli.json file at the root of your Angular CLI project folder, 
+and find the scripts: [] property, add this inside it:
+
+"../node_modules/jquery/dist/jquery.min.js"
+
+like :
+"scripts": ["../node_modules/jquery/dist/jquery.min.js"],
+    "environmentSource": "environments/environment.ts",
+    "environments": {
+    "dev": "environments/environment.ts",
+    "prod": "environments/environment.prod.ts"
+    }
+
+In component:
+import $ from 'jquery';
+```
