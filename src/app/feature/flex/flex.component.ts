@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs/Observable';
+
 @Component({
   selector: 'app-flex',
   templateUrl: './flex.component.html',
@@ -26,5 +28,12 @@ export class FlexComponent implements OnInit {
   toggleDirection() {
     const next = (this.DIRECTIONS.indexOf(this.direction) + 1 ) % this.DIRECTIONS.length;
     this.direction = this.DIRECTIONS[next];
+  }
+
+  observe() {
+    // alert('observe');
+    const responseStream: Observable<any> = Observable.create('https://api.github.com/users');
+    
+
   }
 }
